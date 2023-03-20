@@ -25,12 +25,13 @@ function generatePassword () {
     var fifthprompt = window.confirm ('Click OK to confirm including uppercase characters.');
   }
 
+  console.log(firstprompt);
   console.log(secondprompt);
   console.log(thirdprompt);
   console.log(fourthprompt);
   console.log(fifthprompt);
 
-  var specialCharacters = "!#$%& ()*+,-./:;<=>?@[]^_`{|}~";
+  var specialCharacters = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
   var numericCharacters = "0123456789";
   var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -59,13 +60,19 @@ if (secondprompt === false && thirdprompt === false && fourthprompt === false &&
   window.alert ('Please select at least one type of character for your password');
   return;
 }
+var randomNumber = Math.floor(Math.random() * characterBank.length);
 
+console.log(randomNumber);
 console.log(characterBank);
+console.log(characterBank[0]);
+console.log(characterBank[1]);
+console.log(characterBank.length);
+console.log(characterBank[randomNumber]);
 
 // var password = for (characterBank )
 
 
-// var index = Math.floor(Math.random() * characterBank);
+// var randomNumber = Math.floor(Math.random() * characterBank.length);
 // console.log (randomizer);
 // console.log (typeof randomizer);
 
