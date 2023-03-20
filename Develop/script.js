@@ -8,7 +8,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword () {
   var password = '';
 
-  var UserSelection = '';
+  var characterBank = '';
 
   var firstprompt = window.prompt ('How many characters would you like your password to contain?');
   if (!firstprompt) {
@@ -24,7 +24,6 @@ function generatePassword () {
     var fourthprompt = window.confirm ('Click OK to confirm including lowercase characters.');
     var fifthprompt = window.confirm ('Click OK to confirm including uppercase characters.');
   }
-    // if (firstprompt >= 8 && firstprompt <= 128) {
 
   console.log(secondprompt);
   console.log(thirdprompt);
@@ -37,42 +36,38 @@ function generatePassword () {
   var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 if (secondprompt === true) {
-  console.log ('SecondPrompt is true');
-  UserSelection = UserSelection.concat(specialCharacters);
-} else {
-  console.log ('SecondPrompt is false');
-  UserSelection = UserSelection;
+  console.log ('Special Characters will be included in the password');
+  characterBank = characterBank.concat(specialCharacters);
 }
-
-console.log('second',UserSelection);
 
 if (thirdprompt === true) {
-  UserSelection = UserSelection.concat(numericCharacters);
-} else {
-  UserSelection = UserSelection;
-}
-
-console.log ('third',UserSelection)
+  console.log ('Numeric Characters will be included in the password');  
+  characterBank = characterBank.concat(numericCharacters);
+} 
 
 if (fourthprompt === true) {
-  UserSelection = UserSelection.concat(lowercaseCharacters);
-} else {
-
-}
-
-console.log ('fourth',UserSelection)
+  console.log ('lowercase Characters will be included in the password');
+  characterBank = characterBank.concat(lowercaseCharacters);
+} 
 
 if (fifthprompt === true) {
-  UserSelection = UserSelection.concat(uppercaseCharacters);
+  console.log ('uppercase Characters will be included in the password');
+  characterBank = characterBank.concat(uppercaseCharacters);
 }
-
-console.log ('fifth',UserSelection);
 
 if (secondprompt === false && thirdprompt === false && fourthprompt === false && fifthprompt === false) {
   window.alert ('Please select at least one type of character for your password');
   return;
 }
 
+console.log(characterBank);
+
+// var password = for (characterBank )
+
+
+// var index = Math.floor(Math.random() * characterBank);
+// console.log (randomizer);
+// console.log (typeof randomizer);
 
   return password;
 
