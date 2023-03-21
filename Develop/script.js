@@ -60,18 +60,20 @@ if (secondprompt === false && thirdprompt === false && fourthprompt === false &&
   window.alert ('Please select at least one type of character for your password');
   return;
 }
-var randomNumber = Math.floor(Math.random() * characterBank.length);
 
-console.log(randomNumber);
 console.log(characterBank);
-console.log(characterBank[0]);
-console.log(characterBank[1]);
 console.log(characterBank.length);
-console.log(characterBank[randomNumber]);
 
 // var password = for (characterBank )
 
+for (var i = 0; i < firstprompt; i++) {
+  var randomNumber = Math.floor(Math.random() * characterBank.length);
+  console.log(i + '#of times the loop is running');
+  password = password.concat(characterBank[randomNumber]);
+}
 
+console.log(randomNumber);
+console.log(password);
 // var randomNumber = Math.floor(Math.random() * characterBank.length);
 // console.log (randomizer);
 // console.log (typeof randomizer);
